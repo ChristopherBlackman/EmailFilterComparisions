@@ -42,3 +42,27 @@ class extractor:
 
         return ((x_train_df, y_train),(y_train_df, y_test))
 
+    def nomalized(self):
+        print("Normalizing")
+        ((x_train,x_test),(y_train,y_test)) = self.get()
+
+        trX = np.array(x_train.A.astype(float),copy=True)
+        teX = np.array(y_train.A.astype(float),copy=True)
+
+        for row in range(trX.shape[0]):
+            trX[row,:] = trX[row,:]/np.max(trX[row,:])
+
+        for row in range(teX.shape[0]):
+            teX[row,:] = teX[row,:]/np.max(teX[row,:])
+        
+        trY = self.__one_hot(x_test.values)
+        teY = self.__one_hot(y_test.values)
+
+        return ((trX, trY),(teX, teY))
+
+    def __one_hot(self,x):
+        m = np.unique(x).size
+        matrix = np.zeros([x.shape[0],m])
+        for i in range(x.shape[0]):
+            matrix[i,x[i]] = 1
+        return matrix
