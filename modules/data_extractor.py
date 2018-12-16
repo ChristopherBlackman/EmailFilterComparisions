@@ -44,7 +44,7 @@ class extractor:
         return ((x_train_df, y_train),(y_train_df, y_test))
 
     # normalized data to be [0,1]
-    def nomalized(self):
+    def nomalized(self,on_hot=True):
         print("Normalizing")
         ((x_train,x_test),(y_train,y_test)) = self.get()
 
@@ -57,13 +57,17 @@ class extractor:
         for row in range(teX.shape[0]):
             teX[row,:] = teX[row,:]/np.max(teX[row,:])
         
-        trY = self.__one_hot(x_test.values)
-        teY = self.__one_hot(y_test.values)
+        if on_hot:
+            trY = self.__one_hot(x_test.values)
+            teY = self.__one_hot(y_test.values)
+        else:
+            trY = x_test.values
+            teY = y_test.values
 
         return ((trX, trY),(teX, teY))
 
     # min max normalized data
-    def min_max_nomalized(self):
+    def min_max_nomalized(self,on_hot=True):
         print("Normalizing-MIN-MAX")
         ((x_train,x_test),(y_train,y_test)) = self.get()
 
@@ -77,8 +81,12 @@ class extractor:
             teX[row,:] = (teX[row,:]-np.min(teX[row,:]))/(np.max(teX[row,:])-np.min(teX[row,:]))
             #teX[row,:] = teX[row,:]/np.max(teX[row,:])
         
-        trY = self.__one_hot(x_test.values)
-        teY = self.__one_hot(y_test.values)
+        if on_hot:
+            trY = self.__one_hot(x_test.values)
+            teY = self.__one_hot(y_test.values)
+        else:
+            trY = x_test.values
+            teY = y_test.values
 
         return ((trX, trY),(teX, teY))
 
