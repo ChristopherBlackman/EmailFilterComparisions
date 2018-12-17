@@ -66,6 +66,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 INPUT report.aux
 INPUT report.aux
 OUTPUT report.aux
@@ -99,7 +101,6 @@ OUTPUT report.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -120,6 +121,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT figures/WordFrequency_ham_vs_spam.png
